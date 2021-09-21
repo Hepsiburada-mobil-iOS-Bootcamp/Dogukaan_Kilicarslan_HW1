@@ -115,6 +115,7 @@
 			children = (
 				A7CF0A7B26F7CDC20049FA45 /* Modules */,
 				A7CF0A7626F7C5DE0049FA45 /* Managers */,
+				A7CF0A7426F7C0680049FA45 /* AlgorithmViewController.swift */,
 				A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */,
 				A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */,
 				A7CF0A4426F7BEBF0049FA45 /* ViewController.swift */,
@@ -123,7 +124,6 @@
 				A7CF0A4E26F7BEBF0049FA45 /* LaunchScreen.storyboard */,
 				A7CF0A5126F7BEBF0049FA45 /* Info.plist */,
 				A7CF0A4926F7BEBF0049FA45 /* iOS_Week_1.xcdatamodeld */,
-				A7CF0A7426F7C0680049FA45 /* AlgorithmViewController.swift */,
 			);
 			path = iOS_Week_1;
 			sourceTree = "<group>";

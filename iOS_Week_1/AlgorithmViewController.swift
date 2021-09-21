@@ -9,7 +9,7 @@ import UIKit
 
 class AlgorithmViewController: UIViewController {
     
-    private var algorithmManager: AlgorithmProtocol!
+    private var algorithmManager: AlgorithmProtocol = AlgorithmManager()
 
     convenience init(algorithmManager: AlgorithmProtocol) {
         self.init()
