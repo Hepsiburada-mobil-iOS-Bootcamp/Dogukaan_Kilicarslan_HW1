@@ -53,12 +53,30 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
+        let s = "anagram"
+        let t = "gramana"
+        print("'\(s)' an anagram of '\(t)': \(isAnagram(s, t))")
         
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        
+        //sorting every character in the given strings before doing anything with them
+        
+        let sortedS = Array(s).sorted()
+        let sortedT = Array(t).sorted()
+        
+        var itIsAnagram: Bool
+        
+        // they should be the same after they get sorted if they are anagrams
+        if sortedS == sortedT {
+            itIsAnagram = true
+            return itIsAnagram
+        }
+        // else not lol
+        itIsAnagram = false
+        return itIsAnagram
+    }
     
     // MARK: - Contains Duplicate
     /*
