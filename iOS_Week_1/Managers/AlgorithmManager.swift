@@ -121,12 +121,37 @@ class AlgorithmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
+        let nums = [3,0,1,5,4,8,9,7,6]
         
+        print("\(missingNumber(nums))")
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        
+        let numArraySorted = Set(nums.sorted())
+        
+        for i in 0...nums.count where !numArraySorted.contains(i) { // we try to reach the number with i. when i value gets to the point where the set does not contain value "i" it will return "i" as a missing number.
+            return i
+        }
+        return 0123456789
+    }
     
+    /*
+     ALTERNATIVELY I COULD USE EXTENSION I FOUND ONLINE
+     ----------
+     let names1 = ["John", "Paul", "Ringo"]
+     let names2 = ["Ringo", "Paul", "George"]
+     let difference = names1.difference(from: names2)
+     ----------
+     
+     extension Array where Element: Hashable {
+     func difference(from other: [Element]) -> [Element] {
+     let thisSet = Set(self)
+     let otherSet = Set(other)
+     return Array(thisSet.symmetricDifference(otherSet))
+     }
+     }
+     
+     */
     
 }
