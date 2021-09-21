@@ -23,7 +23,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
-        // algorithmManager.twoSumTest()
+         algorithmManager.twoSumTest()
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {

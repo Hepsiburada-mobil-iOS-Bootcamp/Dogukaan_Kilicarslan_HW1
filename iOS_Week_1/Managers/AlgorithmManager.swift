@@ -27,8 +27,25 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        
+        // I needed to initialize an empty results array to return the result of the function.
+        var resultArray = [Int]()
+        
+        //checking each consecutive number and adding them together to reach the target specified.
+        
+        for i in 0..<nums.count {
+            if i < nums.capacity - 1 {
+                
+                if nums[i] + nums[i + 1] == target {
+                    //appending the positions of the numbers in the original nums: [Int] array. I have to add both i and i+1.
+                    resultArray.append(i)
+                    resultArray.append(i + 1)
+                }
+            }
+        }
+        
+        //returning the result from the checking loop
+        return resultArray
     }
     
     // MARK: - IsPalindrome
