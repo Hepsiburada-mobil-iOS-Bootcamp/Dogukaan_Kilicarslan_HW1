@@ -56,12 +56,53 @@ class AlgorithmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        let s: String = "A man, a plan, a canal: Panama"
+        let empty: String = ""
+        let s2: String = "Eva, can I see bees in a cave?"
+        let s3: String = "Kazak"
+        let s4: String = "Siz de çekoslavyalılaştıramadıklarımızdanmısınız"
+        print("is ' \(empty)' a palindrome?: \(isPalindrome(empty))")
+        print("is '\(s)' a palindrome?: \(isPalindrome(s))")
+        print("is '\(s2)' a palindrome?: \(isPalindrome(s2))")
+        print("is '\(s3)' a palindrome?: \(isPalindrome(s3))")
+        print("is '\(s4)' a palindrome?: \(isPalindrome(s4))")
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        
+        //first of all we need to take the s: and make it one continuous character string without exclamation or punctuation marks
+        
+        let pattern = "[^A-Za-z0-9]+"
+        let unoptimizedString = s.replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        let string = unoptimizedString.lowercased()
+        
+        // 1-if a string a palindrome we only need to check if the first half of the string is mirrored with other half
+        // 2-we can compare and drop first and last character of the string
+        // 3-if they are not same we stop and return false
+        // 4-if they are same we continue until we reach the middle we stop
+        
+        
+        var itIs = true // when true the string is a palindrome
+        
+        
+        
+        let length = string.count / 2 //1
+        
+        for i in 0..<length { //2-3-4 goes here
+            
+            let start = string.index(string.startIndex, offsetBy: i) //2
+            // we use offset as minus i because we are looking for a mirrored character. if we use plus i we go out of bound of the string when we get to the first index. when i is 0 it will be -1 but if we put minus before the i it will be plus one.
+            let end = string.index(string.endIndex, offsetBy: -i - 1) //2 ( to find the endIndex we need to decrease the i by 1 or our constant goes out of bounds...)
+            
+            if string[start] != string[end] {
+                itIs = false
+                return  itIs //3
+            }
+        }
+        
+        itIs = true
+        return itIs
+    }
     
     // MARK: - Valid Anagram
     /*
