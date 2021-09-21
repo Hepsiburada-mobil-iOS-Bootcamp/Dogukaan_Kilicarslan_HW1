@@ -170,11 +170,28 @@ class AlgorithmManager: AlgorithmProtocol {
      */
     func mergeArraysTest() {
         
+        var nums1 = [1,2,3,0,0,0]
+        let m = 3
+        let nums2 = [2,5,6]
+        let n = 3
+        
+        print("if '\(nums1)' array and '\(nums2)' array merge, they create ",  merge(&nums1, m, nums2, n), "\(nums1)") //MARK: - Inout parameter. they get in and get out with the value they got inside the function.
+        
     }
     
-    private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) { // inout makes the input variable. They get in the function and come out with the last value they assigned to.
+        
+        var count = 0 // how many times we are gonna loop inside the for-loop
+        
+        for i in m..<m+n { // 3..<6
             
+            nums1[i] = nums2[count] // nums1[2] = nums2[0] -> nums1[3] = nums2[1] -> nums1[4] = nums2[2] -> nums1[5] = nums2[3]
+            count += 1              // above line means, we leave the first m count of elements alone in the nums1 array and one by one replace other elements
+        }
+        nums1 = nums1.sorted() // we sort the nums1 in the ascending order. since "&" keyword makes the input variable, it takes the last result as its value
+        
     }
+
     
     // MARK: - Intersection of Two Arrays
     /*
