@@ -201,12 +201,18 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
-        
+        let nums1 = [1,2,2,1]
+        let nums2 = [2,2]
+        print("intersection between '\(nums1)' and '\(nums2)' is  '\(intersect(nums1, nums2))'")
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        // we first filter if the first array contains the second array. and return the result as output
+        let intersection = nums1.filter(nums2.contains)
+        
+        return intersection
+        
+    }
     
     // MARK: - Missing Number
     /*
