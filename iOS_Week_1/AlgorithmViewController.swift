@@ -33,6 +33,7 @@ class AlgorithmViewController: UIViewController {
     
     @IBAction func AnagramAction(_ sender: Any) {
         // call required test function
+        algorithmManager.isAnagramTest()
     }
     
     @IBAction func duplicationAction(_ sender: Any) {
