@@ -69,12 +69,16 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        let nums1 = [1,2,3,1]
+        let nums2 = [1,2,3,4]
+        print("\(nums1) array contain duplicates: \(containsDuplicate(nums1))")
+        print("\(nums2) array contain duplicates: \(containsDuplicate(nums2))")
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        // Sets dont contain duplicates. If we turn this array into a set and compare the elements we determine if that array contains duplicates...
+        return Set(nums).count < nums.count
+    }
     
     // MARK: - Merge Sorted Array
     /*
