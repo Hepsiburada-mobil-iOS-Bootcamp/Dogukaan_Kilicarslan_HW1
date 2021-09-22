@@ -22,6 +22,14 @@
 		A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */; };
 		A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */; };
 		A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */; };
+		D8A7479626FB36600044949C /* EnemyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479526FB36600044949C /* EnemyClass.swift */; };
+		D8A7479826FB36730044949C /* EnemyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479726FB36730044949C /* EnemyProtocol.swift */; };
+		D8A7479A26FB368E0044949C /* TownStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479926FB368E0044949C /* TownStruct.swift */; };
+		D8A7479C26FB36A00044949C /* TownProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479B26FB36A00044949C /* TownProtocol.swift */; };
+		D8A7479E26FB36B40044949C /* Bard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479D26FB36B40044949C /* Bard.swift */; };
+		D8A747A026FB36D60044949C /* BardEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7479F26FB36D60044949C /* BardEnums.swift */; };
+		D8A747A226FB36E50044949C /* Dragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A747A126FB36E50044949C /* Dragon.swift */; };
+		D8A747A426FB36F70044949C /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A747A326FB36F70044949C /* Skeleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStruct.swift; sourceTree = "<group>"; };
 		A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEnum.swift; sourceTree = "<group>"; };
+		D8A7479526FB36600044949C /* EnemyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyClass.swift; sourceTree = "<group>"; };
+		D8A7479726FB36730044949C /* EnemyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyProtocol.swift; sourceTree = "<group>"; };
+		D8A7479926FB368E0044949C /* TownStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownStruct.swift; sourceTree = "<group>"; };
+		D8A7479B26FB36A00044949C /* TownProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownProtocol.swift; sourceTree = "<group>"; };
+		D8A7479D26FB36B40044949C /* Bard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bard.swift; sourceTree = "<group>"; };
+		D8A7479F26FB36D60044949C /* BardEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BardEnums.swift; sourceTree = "<group>"; };
+		D8A747A126FB36E50044949C /* Dragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon.swift; sourceTree = "<group>"; };
+		D8A747A326FB36F70044949C /* Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +177,32 @@
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
+				D8A747A526FB37260044949C /* DungeonCrawler */,
+				D8A747A626FB37490044949C /* Towns */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		D8A747A526FB37260044949C /* DungeonCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				D8A747A126FB36E50044949C /* Dragon.swift */,
+				D8A747A326FB36F70044949C /* Skeleton.swift */,
+				D8A7479D26FB36B40044949C /* Bard.swift */,
+				D8A7479726FB36730044949C /* EnemyProtocol.swift */,
+				D8A7479F26FB36D60044949C /* BardEnums.swift */,
+				D8A7479526FB36600044949C /* EnemyClass.swift */,
+			);
+			path = DungeonCrawler;
+			sourceTree = "<group>";
+		};
+		D8A747A626FB37490044949C /* Towns */ = {
+			isa = PBXGroup;
+			children = (
+				D8A7479926FB368E0044949C /* TownStruct.swift */,
+				D8A7479B26FB36A00044949C /* TownProtocol.swift */,
+			);
+			path = Towns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,9 +340,17 @@
 				A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */,
 				A7CF0A4B26F7BEBF0049FA45 /* iOS_Week_1.xcdatamodeld in Sources */,
 				A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */,
+				D8A7479626FB36600044949C /* EnemyClass.swift in Sources */,
+				D8A7479826FB36730044949C /* EnemyProtocol.swift in Sources */,
 				A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */,
+				D8A7479A26FB368E0044949C /* TownStruct.swift in Sources */,
+				D8A7479C26FB36A00044949C /* TownProtocol.swift in Sources */,
 				A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */,
+				D8A747A026FB36D60044949C /* BardEnums.swift in Sources */,
+				D8A747A426FB36F70044949C /* Skeleton.swift in Sources */,
+				D8A747A226FB36E50044949C /* Dragon.swift in Sources */,
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
+				D8A7479E26FB36B40044949C /* Bard.swift in Sources */,
 				A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */,
 				A7CF0A7A26F7C5F50049FA45 /* AlgorithmProtocol.swift in Sources */,
 			);
