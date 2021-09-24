@@ -95,8 +95,8 @@ class AlgorithmManager: AlgorithmProtocol {
             let end = string.index(string.endIndex, offsetBy: -i - 1) //2 ( to find the endIndex we need to decrease the i by 1 or our constant goes out of bounds...)
             
             if string[start] != string[end] {
-                itIs = false
-                return  itIs //3
+                //Code review reflection
+                return  false //3
             }
         }
         
@@ -124,16 +124,19 @@ class AlgorithmManager: AlgorithmProtocol {
         let sortedS = Array(s).sorted()
         let sortedT = Array(t).sorted()
         
-        var itIsAnagram: Bool
         
-        // they should be the same after they get sorted if they are anagrams
-        if sortedS == sortedT {
-            itIsAnagram = true
-            return itIsAnagram
-        }
-        // else not lol
-        itIsAnagram = false
-        return itIsAnagram
+        // Code review reflection
+//        var itIsAnagram: Bool
+//
+//        // they should be the same after they get sorted if they are anagrams
+//        if sortedS == sortedT {
+//            itIsAnagram = true
+//            return itIsAnagram
+//        }
+//        // else not lol
+//        itIsAnagram = false
+//        return itIsAnagram
+        return sortedS == sortedT
     }
     
     // MARK: - Contains Duplicate
@@ -208,9 +211,9 @@ class AlgorithmManager: AlgorithmProtocol {
     
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         // we first filter if the first array contains the second array. and return the result as output
-        let intersection = nums1.filter(nums2.contains)
-        
-        return intersection
+         
+        //Code review reflection
+        return nums1.filter(nums2.contains)
         
     }
     
@@ -236,6 +239,7 @@ class AlgorithmManager: AlgorithmProtocol {
         for i in 0...nums.count where !numArraySorted.contains(i) { // we try to reach the number with i. when i value gets to the point where the set does not contain value "i" it will return "i" as a missing number.
             return i
         }
+        //code should never return this
         return 0123456789
     }
     
